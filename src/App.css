@@ -282,6 +282,53 @@
 }
 
 /* ─── ABOUT PAGE ─────────────────────────────────────────── */
+.about-page {
+  gap: 0;
+  padding: 0;
+  background: #fff;
+}
+
+.about-scroller {
+  width: 100%;
+  background: #101533;
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+.about-scroller-track {
+  display: flex;
+  width: max-content;
+  gap: 32px;
+  will-change: transform;
+  animation: aboutScrollerMove 18s linear infinite;
+}
+
+.about-scroller-track span {
+  font-family: var(--font-mono);
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: -0.8px;
+  white-space: nowrap;
+  color: #fff;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px;
+  width: 100%;
+}
+
+@keyframes aboutScrollerMove {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-33.333%);
+  }
+}
+
 .about-header {
   flex-shrink: 0;
 }

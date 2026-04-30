@@ -12,7 +12,7 @@ export default function FunPage() {
             display: 'block',
           }}
         >
-          this section is still a work in progress
+           this section is still a work in progress
         </span>
       </div>
     </section>
