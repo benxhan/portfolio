@@ -25,7 +25,7 @@ export default function AboutPage() {
           <AboutCard
             variant="orange"
             title="Hack4Impact"
-            imageUrl="https://www.figma.com/api/mcp/asset/c3d15635-051b-40e0-9da0-9d3b3978dd0e"
+            imageUrl="/images/hack4impact.jpg"
           >
             on campus-involvement: part of the cornell hack4impact branch,
             working alongside non-profits to develop technology for them!! best
