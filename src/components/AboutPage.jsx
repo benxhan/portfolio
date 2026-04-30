@@ -99,20 +99,20 @@ export default function AboutPage() {
             Find more of me:
             <div className="contact-links">
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/benphans"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 LinkedIn ↗
               </a>
               <a
-                href="https://github.com/benhan"
+                href="https://github.com/benxhan"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 GitHub ↗
               </a>
-              <a href="mailto:ben@example.com">Email ↗</a>
+              <a href="mailto:benxhan00@gmail.com">Email ↗</a>
             </div>
           </AboutCard>
         </div>
