@@ -302,6 +302,56 @@
   text-underline-offset: 3px;
 }
 
+.about-visitor-highlight {
+  display: inline-block;
+  transform-origin: center;
+  animation: visitorPopWiggle 1000ms cubic-bezier(0.2, 0.85, 0.25, 1) 250ms 1 both;
+}
+
+.about-visitor-context {
+  display: inline-block;
+  animation: visitorContextDim 2300ms cubic-bezier(0.2, 0.85, 0.25, 1) 20ms 1 both;
+}
+
+@keyframes visitorPopWiggle {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  28% {
+    transform: scale(1.22) rotate(0deg);
+  }
+  68% {
+    transform: scale(1.22) rotate(0deg);
+  }
+  82% {
+    transform: scale(1.14) rotate(4deg);
+  }
+  90% {
+    transform: scale(1.07) rotate(-3deg);
+  }
+  96% {
+    transform: scale(1.03) rotate(1.5deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes visitorContextDim {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0.2;
+  }
+  55% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .about-bio {
   font-size: 22px;
   letter-spacing: -0.9px;

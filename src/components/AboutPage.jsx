@@ -6,7 +6,9 @@ export default function AboutPage() {
       <div className="about-header">
         <div className="about-greeting">hey, thanks for visiting my site!</div>
         <div className="about-visitor">
-          you are the <u>4th unique</u> visitor.
+          <span className="about-visitor-context">you are the</span>{' '}
+          <u className="about-visitor-highlight">4th unique</u>
+          {' '}<span className="about-visitor-context">visitor.</span>
         </div>
       </div>
 
