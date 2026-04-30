@@ -21,6 +21,9 @@
 
   --sidebar-w: 360px;
   --radius: 10px;
+  --cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22' fill='none'%3E%3Ccircle opacity='0.7' cx='11' cy='11' r='11' fill='%23263AB6'/%3E%3C/svg%3E") 11 11, auto;
+  --cursor-click: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25' fill='none'%3E%3Ccircle opacity='0.9' cx='12.5' cy='12.5' r='12.5' fill='%23263AB6'/%3E%3C/svg%3E") 12.5 12.5, pointer;
+  --cursor-work-hover: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='26' viewBox='0 0 48 26' fill='none'%3E%3Crect x='0.5' y='0.5' width='47' height='25' rx='10' fill='%236775CC'/%3E%3Ctext x='24' y='17' text-anchor='middle' font-family='Helvetica Neue, Helvetica, Arial, sans-serif' font-size='12' fill='%23FFFFFF'%3EView%3C/text%3E%3C/svg%3E") 24 13, pointer;
 }
 
 /* ─── RESET ─────────────────────────────────────────────── */
@@ -37,6 +40,7 @@ body {
   background: var(--bg);
   color: var(--text-dark);
   height: 100dvh;
+  cursor: var(--cursor);
 }
 
 img {
@@ -44,7 +48,7 @@ img {
 }
 
 button {
-  cursor: pointer;
+  cursor: var(--cursor-click);
   border: none;
   background: none;
   font: inherit;
@@ -52,7 +56,15 @@ button {
 }
 
 a {
+  cursor: var(--cursor-click);
   color: inherit;
+}
+
+input,
+textarea,
+select,
+label {
+  cursor: var(--cursor-click);
 }
 
 html, body, #root {

@@ -18,7 +18,7 @@ export default function AboutPage() {
           Cornell University. I'm extremely passionate about human-centered
           design and software development.
         </p>
-        <p className="about-subtitle">what else do i get up to?</p>
+        <p className="about-subtitle">But what else do I get up to?</p>
       </div>
 
       <div className="about-grid">
