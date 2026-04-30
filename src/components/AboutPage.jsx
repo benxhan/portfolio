@@ -1,6 +1,23 @@
+import { useState, useEffect } from 'react';
 import AboutCard from './AboutCard';
+import { apiClient } from '../api/client';
 
 export default function AboutPage() {
+  const [visitorCount, setVisitorCount] = useState(0);
+
+  useEffect(() => {
+    async function initializeVisitorTracking() {
+      try {
+        // Track this visitor
+        const trackData = await apiClient.trackVisitor();
+        setVisitorCount(trackData.count);
+      } catch (error) {
+        console.error('Error tracking visitor:', error);
+      }
+    }
+
+    initializeVisitorTracking();
+  }, []);
   return (
     <section className="page about-page">
       <div className="about-scroller" aria-label="Thank you for visiting my portfolio">
@@ -22,7 +39,7 @@ export default function AboutPage() {
           <div className="about-greeting">hey, thanks for visiting my site!</div>
           <div className="about-visitor">
             <span className="about-visitor-context">you are the</span>{' '}
-            <u className="about-visitor-highlight">4th unique</u>
+            <u className="about-visitor-highlight">{visitorCount}{visitorCount === 1 ? 'st' : visitorCount === 2 ? 'nd' : visitorCount === 3 ? 'rd' : 'th'} unique</u>
             {' '}<span className="about-visitor-context">visitor.</span>
           </div>
         </div>
