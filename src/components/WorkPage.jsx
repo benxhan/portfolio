@@ -50,9 +50,10 @@ export default function WorkPage() {
     <section className="page active">
       <UpdateBanner />
       <div className="work-grid">
-        {projects.map((project) => (
+        {projects.map((project, index) => (
           <ProjectCard
             key={project.id}
+            index={index}
             period={project.period}
             number={project.number}
             imageUrl={project.imageUrl}

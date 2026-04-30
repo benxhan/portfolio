@@ -1,7 +1,29 @@
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 import Navigation from './Navigation';
 
 export default function Sidebar({ activePage, onPageChange }) {
+  const email = 'benxhan00@gmail.com';
+  const [emailCopied, setEmailCopied] = useState(false);
+
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(email);
+    } catch {
+      const textArea = document.createElement('textarea');
+      textArea.value = email;
+      textArea.style.position = 'fixed';
+      textArea.style.left = '-9999px';
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+    }
+    setEmailCopied(true);
+    setTimeout(() => setEmailCopied(false), 2400);
+  };
+
   return (
     <aside className="sidebar">
       <div>
@@ -29,6 +51,36 @@ export default function Sidebar({ activePage, onPageChange }) {
           />
         </svg>
         <div className="logo-location">Ithaca, NY</div>
+        <div className="sidebar-links" aria-label="Contact links">
+          <a
+            className="sidebar-link"
+            href="https://www.linkedin.com/in/benphans"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            LinkedIn
+          </a>
+          <span className="sidebar-link-separator" aria-hidden="true">
+            ,
+          </span>
+          <a
+            className="sidebar-link"
+            href="https://github.com/benxhan"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            GitHub
+          </a>
+          <span className="sidebar-link-separator" aria-hidden="true">
+            ,
+          </span>
+          <div className="sidebar-email-wrap" style={{ position: 'relative' }}>
+            {emailCopied && <div className="sidebar-link-copied">Copied!</div>}
+            <button className="sidebar-link sidebar-email" type="button" onClick={handleCopyEmail}>
+              Email
+            </button>
+          </div>
+        </div>
       </div>
     </aside>
   );

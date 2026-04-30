@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 
 export default function ProjectCard({
+  index,
   period,
   number,
   imageUrl,
@@ -11,6 +12,7 @@ export default function ProjectCard({
   return (
     <a
       className="project-card"
+      style={{ '--card-index': index }}
       href={href || '#'}
       target={href ? '_blank' : undefined}
       rel={href ? 'noreferrer noopener' : undefined}
@@ -20,7 +22,9 @@ export default function ProjectCard({
         <span>{period}</span>
         <span>NO. {number}</span>
       </div>
-      <img className="card-image" src={imageUrl} alt={title} />
+      <div className="card-image-wrap">
+        <img className="card-image" src={imageUrl} alt={title} />
+      </div>
       <div>
         <div className="card-title">{title}</div>
         <div className="card-desc">{description}</div>
@@ -30,6 +34,7 @@ export default function ProjectCard({
 }
 
 ProjectCard.propTypes = {
+  index: PropTypes.number.isRequired,
   period: PropTypes.string.isRequired,
   number: PropTypes.number.isRequired,
   imageUrl: PropTypes.string.isRequired,
