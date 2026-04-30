@@ -10,7 +10,7 @@ export default function UpdateBanner() {
     async function fetchLatestCommit() {
       try {
         const res = await fetch(
-          'https://api.github.com/repos/benhan/portfolio/commits?per_page=1'
+          'https://api.github.com/repos/benxhan/portfolio/commits?per_page=1'
         );
         if (!res.ok) return;
         const data = await res.json();
@@ -18,8 +18,19 @@ export default function UpdateBanner() {
         const msg = commitData.commit.message.split('\n')[0].slice(0, 60);
         const date = new Date(commitData.commit.author.date);
         const diff = Math.round((Date.now() - date) / 86400000);
-        const ago =
+        const timeAgo =
           diff === 0 ? 'today' : diff === 1 ? '1 day ago' : `${diff} days ago`;
+        const dateStr = date.toLocaleDateString('en-US', {
+          month: 'short',
+          day: 'numeric',
+          year: 'numeric',
+        });
+        const timeStr = date.toLocaleTimeString('en-US', {
+          hour: '2-digit',
+          minute: '2-digit',
+          hour12: true,
+        });
+        const ago = `${timeAgo} · ${dateStr} at ${timeStr}`;
 
         setCommit({ msg, time: ago });
       } catch (_) {
@@ -36,7 +47,7 @@ export default function UpdateBanner() {
         <span className="update-title">latest update</span>
         <a
           className="update-link"
-          href="https://github.com/benhan"
+          href="https://github.com/benxhan/portfolio"
           target="_blank"
           rel="noopener noreferrer"
           title="GitHub repository"
