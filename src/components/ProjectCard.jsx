@@ -6,9 +6,16 @@ export default function ProjectCard({
   imageUrl,
   title,
   description,
+  href,
 }) {
   return (
-    <a className="project-card" href="#" aria-label={title}>
+    <a
+      className="project-card"
+      href={href || '#'}
+      target={href ? '_blank' : undefined}
+      rel={href ? 'noreferrer noopener' : undefined}
+      aria-label={title}
+    >
       <div className="card-meta">
         <span>{period}</span>
         <span>NO. {number}</span>
@@ -28,4 +35,5 @@ ProjectCard.propTypes = {
   imageUrl: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  href: PropTypes.string,
 };

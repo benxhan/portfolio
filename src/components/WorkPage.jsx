@@ -21,6 +21,7 @@ const projects = [
     title: "Anabel's Grocery",
     description:
       'Backend web development—implemented API for database of users/time shifts & authorization via Firebase',
+    href: 'https://github.com/cornellh4i/anabels-grocery',
   },
   {
     id: 3,
@@ -57,6 +58,7 @@ export default function WorkPage() {
             imageUrl={project.imageUrl}
             title={project.title}
             description={project.description}
+            href={project.href}
           />
         ))}
       </div>

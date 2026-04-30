@@ -44,7 +44,7 @@ export default function UpdateBanner() {
   return (
     <div className="update-banner">
       <div className="update-header">
-        <span className="update-title">latest update</span>
+        <span className="update-title">latest commit</span>
         <a
           className="update-link"
           href="https://github.com/benxhan/portfolio"
