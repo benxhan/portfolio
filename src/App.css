@@ -300,6 +300,12 @@
   gap: 20px;
 }
 
+@media (max-width: 1000px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .project-card {
   background: var(--card-bg);
   border: 1px solid var(--border);
