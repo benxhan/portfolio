@@ -4,6 +4,8 @@ import { apiClient } from '../api/client';
 
 export default function AboutPage() {
   const [visitorCount, setVisitorCount] = useState(0);
+  const email = 'benxhan00@gmail.com';
+  const [emailCopied, setEmailCopied] = useState(false);
 
   useEffect(() => {
     async function initializeVisitorTracking() {
@@ -18,6 +20,24 @@ export default function AboutPage() {
 
     initializeVisitorTracking();
   }, []);
+
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(email);
+    } catch {
+      const textArea = document.createElement('textarea');
+      textArea.value = email;
+      textArea.style.position = 'fixed';
+      textArea.style.left = '-9999px';
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+    }
+    setEmailCopied(true);
+    setTimeout(() => setEmailCopied(false), 2400);
+  };
   return (
     <section className="page about-page">
       <div className="about-scroller" aria-label="Thank you for visiting my portfolio">
@@ -146,7 +166,12 @@ export default function AboutPage() {
                 >
                   GitHub ↗
                 </a>
-                <a href="mailto:benxhan00@gmail.com">Email ↗</a>
+                <div className="contact-email-wrap">
+                  {emailCopied && <div className="sidebar-link-copied">Copied!</div>}
+                  <button type="button" className="contact-email" onClick={handleCopyEmail}>
+                    Email
+                  </button>
+                </div>
               </div>
             </AboutCard>
           </div>
