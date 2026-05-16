@@ -108,7 +108,7 @@ export default function AboutPage() {
             <AboutCard
               variant="orange"
               title="Where I'm from"
-              imageUrl="/images/where%20im%20from.png"
+              imageUrl="/images/where-im-from.png"
               imagePosition="bottom"
             >
               From the Bay Area in California! Here's a picture right by the
@@ -121,7 +121,7 @@ export default function AboutPage() {
             <AboutCard
               variant="dark"
               title="Design Consulting Cornell"
-              imageUrl="/images/design%20consulting.png"
+              imageUrl="/images/design-consulting.png"
             >
               Another club I'm part of! This is where I first started learning
               about user research, figma, and design in general. Love the people &
@@ -131,7 +131,7 @@ export default function AboutPage() {
             <AboutCard
               variant="orange"
               title="Attempting to Travel More"
-              imageUrl="/images/travel%20more.png"
+              imageUrl="/images/travel-more.png"
               imagePosition="bottom"
             >
               (Kinda) fun fact about me: I've only left the US once—but I REALLY

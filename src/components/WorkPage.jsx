@@ -6,7 +6,7 @@ const projects = [
     id: 1,
     period: 'SUMMER 2025',
     number: 1,
-    imageUrl: '/images/XL8%20swe%20internship.png',
+    imageUrl: '/images/xl8-swe-internship.png',
     title: 'SWE Internship @ XL8.ai',
     description:
       'Fullstack web development—API for subtitle translation format conversion (.srt, .vtt, .stl, .ass) & subtitle video burn-in',
@@ -15,7 +15,7 @@ const projects = [
     id: 2,
     period: 'JAN – MAY 2026',
     number: 2,
-    imageUrl: '/images/anabels%20grcoery.png',
+    imageUrl: '/images/anabels-grocery.png',
     title: "Anabel's Grocery",
     description:
       'Backend web development—implemented API for database of users/time shifts & authorization via Firebase',
@@ -25,7 +25,7 @@ const projects = [
     id: 3,
     period: 'JAN – MAY 2026',
     number: 3,
-    imageUrl: '/images/wolters%20kluwer.png',
+    imageUrl: '/images/wolters-kluwer.png',
     title: 'Wolters Kluwer',
     description:
       'Interface for AI research tool for product managers—document categorization/study',
