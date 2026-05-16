@@ -8,10 +8,11 @@ export default function ProjectCard({
   title,
   description,
   href,
+  noCursor,
 }) {
   return (
     <a
-      className="project-card"
+      className={`project-card${noCursor ? ' project-card-no-cursor' : ''}`}
       style={{ '--card-index': index }}
       href={href || '#'}
       target={href ? '_blank' : undefined}
@@ -50,4 +51,5 @@ ProjectCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   href: PropTypes.string,
+  noCursor: PropTypes.bool,
 };

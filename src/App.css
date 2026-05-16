@@ -332,6 +332,10 @@
   cursor: var(--cursor-work-hover);
 }
 
+.project-card-no-cursor:hover {
+  cursor: var(--cursor-click);
+}
+
 @keyframes cardRiseIn {
   from {
     opacity: 0;

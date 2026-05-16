@@ -8,6 +8,7 @@ const projects = [
     number: 1,
     imageUrl: '/images/xl8-swe-internship.png',
     title: 'SWE Internship @ XL8.ai',
+    noCursor: true,
     description:
       'Fullstack web development—API for subtitle translation format conversion (.srt, .vtt, .stl, .ass) & subtitle video burn-in',
   },
@@ -27,6 +28,7 @@ const projects = [
     number: 3,
     imageUrl: '/images/wolters-kluwer.png',
     title: 'Wolters Kluwer',
+    noCursor: true,
     description:
       'Interface for AI research tool for product managers—document categorization/study',
   },
@@ -36,6 +38,7 @@ const projects = [
     number: 4,
     imageUrl: '/images/quabble.png',
     title: 'Quabble',
+    noCursor: true,
     description:
       'Surveyed 15 participants in 2 rounds of interviews & incorporated information from 4 academic studies for UX research.',
   },
@@ -56,6 +59,7 @@ export default function WorkPage() {
             title={project.title}
             description={project.description}
             href={project.href}
+            noCursor={project.noCursor}
           />
         ))}
       </div>
