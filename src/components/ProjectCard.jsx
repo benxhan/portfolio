@@ -23,7 +23,16 @@ export default function ProjectCard({
         <span>NO. {number}</span>
       </div>
       <div className="card-image-wrap">
-        <img className="card-image" src={imageUrl} alt={title} />
+        <img
+          className="card-image"
+          src={imageUrl}
+          alt={title}
+          onError={(e) => {
+            e.currentTarget.onerror = null;
+            e.currentTarget.src =
+              "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='450'><rect width='100%25' height='100%25' fill='%23f2f2f2'/><text x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23666' font-family='Arial, Helvetica, sans-serif' font-size='18'>Image unavailable</text></svg>";
+          }}
+        />
       </div>
       <div>
         <div className="card-title">{title}</div>
