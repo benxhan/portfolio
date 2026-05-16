@@ -5,9 +5,11 @@ export default function AboutCard({
   title,
   imageUrl,
   imagePosition = 'top',
+  className = '',
+  style,
   children,
 }) {
-  const cardClass = `about-card ${variant}`;
+  const cardClass = `about-card ${variant} ${className}`.trim();
 
   const cardContent = (
     <>
@@ -34,7 +36,11 @@ export default function AboutCard({
     </>
   );
 
-  return <div className={cardClass}>{cardContent}</div>;
+  return (
+    <div className={cardClass} style={style}>
+      {cardContent}
+    </div>
+  );
 }
 
 AboutCard.propTypes = {
@@ -42,5 +48,7 @@ AboutCard.propTypes = {
   title: PropTypes.string.isRequired,
   imageUrl: PropTypes.string,
   imagePosition: PropTypes.oneOf(['top', 'bottom']),
+  className: PropTypes.string,
+  style: PropTypes.object,
   children: PropTypes.node.isRequired,
 };

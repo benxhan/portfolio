@@ -75,7 +75,7 @@ export default function AboutPage() {
 
         <div className="about-grid">
           {/* Column 1 */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+          <div className="about-column">
             <AboutCard
               variant="orange"
               title="Hack4Impact"
@@ -110,6 +110,8 @@ export default function AboutPage() {
               title="Where I'm from"
               imageUrl="/images/where-im-from.png"
               imagePosition="bottom"
+              className="about-card-fill"
+              style={{ flex: 1 }}
             >
               From the Bay Area in California! Here's a picture right by the
               Golden Gate Bridge that I took.
@@ -117,7 +119,7 @@ export default function AboutPage() {
           </div>
 
           {/* Column 2 */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+          <div className="about-column">
             <AboutCard
               variant="dark"
               title="Design Consulting Cornell"
