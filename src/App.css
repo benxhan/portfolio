@@ -656,6 +656,15 @@
 }
 
 /* ─── FUN PAGE ───────────────────────────────────────────── */
+.fun-page {
+  gap: 0;
+  padding: 0;
+}
+
+.fun-content {
+  padding: 30px;
+}
+
 .fun-placeholder {
   display: flex;
   align-items: center;

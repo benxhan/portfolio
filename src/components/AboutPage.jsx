@@ -125,7 +125,7 @@ export default function AboutPage() {
               variant="dark"
               title="Design Consulting Cornell"
               imageUrl="/images/design-consulting.png"
-              href="http://designconsultingcornell.com/"
+              href="https://www.behance.net/dconsultingcornell/"
             >
               Another club I'm part of! This is where I first started learning
               about user research, figma, and design in general. Love the people &
