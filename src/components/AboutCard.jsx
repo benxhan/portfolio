@@ -5,11 +5,12 @@ export default function AboutCard({
   title,
   imageUrl,
   imagePosition = 'top',
+  href,
   className = '',
   style,
   children,
 }) {
-  const cardClass = `about-card ${variant} ${className}`.trim();
+  const cardClass = `about-card ${variant} ${href ? 'about-card-link' : ''} ${className}`.trim();
 
   const cardContent = (
     <>
@@ -36,6 +37,21 @@ export default function AboutCard({
     </>
   );
 
+  if (href) {
+    return (
+      <a
+        className={cardClass}
+        style={style}
+        href={href}
+        target="_blank"
+        rel="noreferrer noopener"
+        aria-label={title}
+      >
+        {cardContent}
+      </a>
+    );
+  }
+
   return (
     <div className={cardClass} style={style}>
       {cardContent}
@@ -48,6 +64,7 @@ AboutCard.propTypes = {
   title: PropTypes.string.isRequired,
   imageUrl: PropTypes.string,
   imagePosition: PropTypes.oneOf(['top', 'bottom']),
+  href: PropTypes.string,
   className: PropTypes.string,
   style: PropTypes.object,
   children: PropTypes.node.isRequired,

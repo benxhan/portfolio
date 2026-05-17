@@ -555,9 +555,17 @@
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
+.about-card-link {
+  text-decoration: none;
+}
+
 .about-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+.about-card-link:hover {
+  cursor: var(--cursor-work-hover);
 }
 
 .about-card.dark {

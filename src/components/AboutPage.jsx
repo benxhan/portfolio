@@ -80,10 +80,11 @@ export default function AboutPage() {
               variant="orange"
               title="Hack4Impact"
               imageUrl="/images/hack4impact.jpg"
+              href="https://www.cornellh4i.org/"
             >
               On campus-involvement: I am part of the Cornell Hack4Impact branch,
               working alongside non-profits to develop technology for them!!
-              Great people & I've learned so much (hi johnny)
+              Great people & I've learned so much
             </AboutCard>
 
             <AboutCard
@@ -124,6 +125,7 @@ export default function AboutPage() {
               variant="dark"
               title="Design Consulting Cornell"
               imageUrl="/images/design-consulting.png"
+              href="http://designconsultingcornell.com/"
             >
               Another club I'm part of! This is where I first started learning
               about user research, figma, and design in general. Love the people &
