@@ -17,7 +17,7 @@ const projects = [
     period: 'JAN – MAY 2026',
     number: 2,
     imageUrl: '/images/anabels-grocery.png',
-    title: "Anabel's Grocery",
+    title: "SWE @ Anabel's Grocery",
     description:
       'Backend web development—implemented API for database of users/time shifts & authorization via Firebase',
     href: 'https://github.com/cornellh4i/anabels-grocery',
@@ -27,7 +27,7 @@ const projects = [
     period: 'JAN – MAY 2026',
     number: 3,
     imageUrl: '/images/wolters-kluwer.png',
-    title: 'Wolters Kluwer',
+    title: 'Product @ Wolters Kluwer',
     noCursor: true,
     description:
       'Interface for AI research tool for product managers—document categorization/study',
@@ -37,7 +37,7 @@ const projects = [
     period: 'SUMMER 2025',
     number: 4,
     imageUrl: '/images/quabble.png',
-    title: 'Quabble',
+    title: 'Product @ Quabble',
     noCursor: true,
     description:
       'Surveyed 15 participants in 2 rounds of interviews & incorporated information from 4 academic studies for UX research.',
