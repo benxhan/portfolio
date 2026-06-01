@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import AboutCard from './AboutCard';
 import { apiClient } from '../api/client';
+// import Lanyard from './Lanyard';
 
 export default function AboutPage() {
+  // eslint-disable-next-line no-unused-vars
   const [visitorCount, setVisitorCount] = useState(0);
   const email = 'benxhan00@gmail.com';
   const [emailCopied, setEmailCopied] = useState(false);
@@ -40,6 +42,10 @@ export default function AboutPage() {
   };
   return (
     <section className="page about-page">
+      {/* <div className="about-lanyard" aria-hidden="true">
+        <Lanyard position={[0, 0, 24]} gravity={[0, -40, 0]} fov={20} transparent />
+      </div> */}
+
       <div className="about-scroller" aria-label="Thank you for visiting my portfolio">
         <div className="about-scroller-track">
           <span>
@@ -55,13 +61,15 @@ export default function AboutPage() {
       </div>
 
       <div className="about-content">
-        <div className="about-header">
+          <div className="about-header">
           <div className="about-greeting">hey, thanks for visiting my site!</div>
+          {/*
           <div className="about-visitor">
             <span className="about-visitor-context">you are the</span>{' '}
             <u className="about-visitor-highlight">{visitorCount}{visitorCount === 1 ? 'st' : visitorCount === 2 ? 'nd' : visitorCount === 3 ? 'rd' : 'th'} unique</u>
             {' '}<span className="about-visitor-context">visitor.</span>
           </div>
+          */}
         </div>
 
         <div>

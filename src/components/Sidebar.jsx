@@ -26,7 +26,7 @@ export default function Sidebar({ activePage, onPageChange }) {
 
   return (
     <aside className="sidebar">
-      <div>
+      <div className="sidebar-top">
         <div className="sidebar-header">
           <div className="sidebar-name">Ben Han</div>
           <div className="sidebar-sub">CS @ Cornell University</div>

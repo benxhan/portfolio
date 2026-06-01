@@ -1,3 +1,5 @@
+import Lanyard from './Lanyard';
+
 export default function FunPage() {
   return (
     <section className="page fun-page">
@@ -15,19 +17,10 @@ export default function FunPage() {
         </div>
       </div>
       <div className="fun-content">
-        <div className="fun-placeholder">
-          coming soon :)
-          <br />
-          <span
-            style={{
-              fontSize: '0.6em',
-              color: '#aaa',
-              marginTop: '8px',
-              display: 'block',
-            }}
-          >
-            this section is still a work in progress
-          </span>
+        <div className="fun-layout">
+          <div className="fun-lanyard" aria-hidden="true">
+            <Lanyard position={[0, 0, 24]} gravity={[0, -40, 0]} fov={20} transparent />
+          </div>
         </div>
       </div>
     </section>
