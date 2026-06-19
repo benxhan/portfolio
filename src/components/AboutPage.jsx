@@ -85,6 +85,7 @@ export default function AboutPage() {
           {/* Column 1 */}
           <div className="about-column">
             <AboutCard
+              index={0}
               variant="orange"
               title="Hack4Impact"
               imageUrl="/images/hack4impact.png"
@@ -96,6 +97,7 @@ export default function AboutPage() {
             </AboutCard>
 
             <AboutCard
+              index={2}
               variant="dark"
               title="Some stuff I love"
             >
@@ -115,6 +117,7 @@ export default function AboutPage() {
             </AboutCard>
 
             <AboutCard
+              index={4}
               variant="orange"
               title="Where I'm from"
               imageUrl="/images/where-im-from.png"
@@ -130,6 +133,7 @@ export default function AboutPage() {
           {/* Column 2 */}
           <div className="about-column">
             <AboutCard
+              index={1}
               variant="dark"
               title="Design Consulting Cornell"
               imageUrl="/images/design-consulting.png"
@@ -141,6 +145,7 @@ export default function AboutPage() {
             </AboutCard>
 
             <AboutCard
+              index={3}
               variant="orange"
               title="Attempting to Travel More"
               imageUrl="/images/travel-more.png"
@@ -155,6 +160,7 @@ export default function AboutPage() {
             </AboutCard>
 
             <AboutCard
+              index={5}
               variant="dark"
               title="Contact"
             >

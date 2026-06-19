@@ -8,9 +8,11 @@ export default function AboutCard({
   href,
   className = '',
   style,
+  index = 0,
   children,
 }) {
   const cardClass = `about-card ${variant} ${href ? 'about-card-link' : ''} ${className}`.trim();
+  const cardStyle = { '--about-index': index, ...style };
 
   const cardContent = (
     <>
@@ -41,7 +43,7 @@ export default function AboutCard({
     return (
       <a
         className={cardClass}
-        style={style}
+        style={cardStyle}
         href={href}
         target="_blank"
         rel="noreferrer noopener"
@@ -53,7 +55,7 @@ export default function AboutCard({
   }
 
   return (
-    <div className={cardClass} style={style}>
+    <div className={cardClass} style={cardStyle}>
       {cardContent}
     </div>
   );
@@ -67,5 +69,6 @@ AboutCard.propTypes = {
   href: PropTypes.string,
   className: PropTypes.string,
   style: PropTypes.object,
+  index: PropTypes.number,
   children: PropTypes.node.isRequired,
 };
