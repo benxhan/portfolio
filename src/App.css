@@ -393,15 +393,15 @@
   translate: 0 24px;
   animation: cardRiseIn 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both;
   animation-delay: calc(360ms + var(--card-index, 0) * 110ms);
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  transition: transform 0.38s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.38s ease;
   text-decoration: none;
   color: inherit;
   will-change: translate, opacity;
 }
 
 .project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+  transform: translateY(-7px) scale(1.03);
+  box-shadow: none;
   cursor: var(--cursor-work-hover);
 }
 
@@ -678,7 +678,7 @@
   gap: 16px;
   color: white;
   cursor: var(--cursor);
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.38s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.38s ease;
   opacity: 0;
   /* entrance uses `translate` (not `transform`) so the hover lift below stays free */
   translate: 0 24px;
@@ -703,8 +703,8 @@
 }
 
 .about-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+  transform: translateY(-7px) scale(1.03);
+  box-shadow: none;
 }
 
 .about-card-link:hover {
