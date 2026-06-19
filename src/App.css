@@ -93,6 +93,33 @@
   flex-direction: column;
   gap: 15px;
   margin-bottom: 30px;
+  animation: sidebarCascade 0.75s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s both;
+}
+
+/* Each sidebar section cascades down with its own fade from top */
+.sidebar-header,
+.nav-wrap,
+.sidebar-logo {
+  will-change: transform, opacity;
+}
+
+.nav-wrap {
+  animation: sidebarCascade 0.75s cubic-bezier(0.34, 1.56, 0.64, 1) 0.24s both;
+}
+
+.sidebar-logo {
+  animation: sidebarCascade 0.75s cubic-bezier(0.34, 1.56, 0.64, 1) 0.38s both;
+}
+
+@keyframes sidebarCascade {
+  from {
+    opacity: 0;
+    transform: translateY(-22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .sidebar-name {
@@ -279,6 +306,21 @@
   flex-direction: column;
   gap: 8px;
   flex-shrink: 0;
+  opacity: 0;
+  transform: translateY(-26px);
+  animation: bannerDropIn 0.75s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s both;
+  will-change: transform, opacity;
+}
+
+@keyframes bannerDropIn {
+  from {
+    opacity: 0;
+    transform: translateY(-26px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .update-header {

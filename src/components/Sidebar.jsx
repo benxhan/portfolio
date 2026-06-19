@@ -50,7 +50,7 @@ export default function Sidebar({ activePage, onPageChange }) {
             strokeWidth="0.5"
           />
         </svg>
-        <div className="logo-location">Ithaca, NY  //  San Jose, CA</div>
+        <div className="logo-location">San Jose, CA</div>
         <div className="sidebar-links" aria-label="Contact links">
           <a
             className="sidebar-link"
