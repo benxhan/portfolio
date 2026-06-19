@@ -87,7 +87,7 @@ export default function AboutPage() {
             <AboutCard
               variant="orange"
               title="Hack4Impact"
-              imageUrl="/images/hack4impact.jpg"
+              imageUrl="/images/hack4impact.png"
               href="https://www.cornellh4i.org/"
             >
               On campus-involvement: I am part of the Cornell Hack4Impact branch,
