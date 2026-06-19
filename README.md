@@ -1,15 +1,15 @@
-# [BEN HAN'S RESUME](https://benhans.vercel.app/)
+# [ben han's resume](https://benhans.vercel.app/)
 
-My personal portfolio - initially designed on Figma and converted to React/Vite via Figma MCP & Claude
+my personal portfolio - initially designed on Figma and converted to React/Vite via Figma MCP & Claude
 
-## Features
+## features
 
 - Case studies for projects/work
 - About me page
 - Responsive design w/ graphics & effects!
 - PLANNED: VISITOR TRACKING SYSTEM
 
-## Tech Stack
+## tech stack
 
 - Typescript
 - React/Vite/Tailwind CSS
