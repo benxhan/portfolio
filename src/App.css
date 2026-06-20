@@ -315,7 +315,7 @@
 }
 
 .update-banner:hover {
-  transform: translateY(-7px) scale(1.03);
+  transform: scale(1.01);
 }
 
 @keyframes bannerDropIn {
